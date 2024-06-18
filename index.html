@@ -1,12 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hello World</title>
+<title>Gridd3902</title>
+<style>
+    :root {
+        --color-background: #ffffff;
+        --font-color: #000000;
+    }
+    .header { grid-area: header; text-align: center; font-size: 50px;}
+    .title { grid-area: title; text-align: center; font-size: 30px;}
+    .info { grid-area: info; font-size: 12px; margin-left: 20px; margin-right: 20px;}
+    .avatar { grid-area: avatar; align-self: flex-start;}
+    .introduction { grid-area: introduction; text-align: justify; }
+    .footer { grid-area: footer; }
+    .setting { grid-area: setting; text-align: center;}
+    .color-setting { grid-area: color; margin-left: 20px; margin-right: 20px;}
+    
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'header header header header header header'
+            'title setting setting setting color color'
+            'avatar introduction introduction introduction info info'
+            'footer footer footer footer footer footer';
+    }
+    
+    .grid-container > div {
+        padding: 20px;
+        background-color: var(--color-background);
+        color: var(--font-color);
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    @font-face {
+	font-family: 'BMitra';
+	src: url('font/BMitra.eot?') format('eot'), 
+	     url('font/BMitra.otf')  format('opentype'),
+	     url('font/BMitra.woff') format('woff'), 
+	     url('font/BMitra.ttf')  format('truetype'),
+	     url('font/BMitra.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'BMitraBold';
+        src: url('font/BMitraBold.eot?') format('eot'), 
+            url('font/BMitraBold.otf')  format('opentype'),
+            url('font/BMitraBold.woff') format('woff'), 
+            url('font/BMitraBold.ttf')  format('truetype'),
+            url('font/BMitraBold.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'BRoya';
+        src: url('font/BRoya.eot?') format('eot'), 
+            url('font/BRoya.otf')  format('opentype'),
+            url('font/BRoya.woff') format('woff'), 
+            url('font/BRoya.ttf')  format('truetype'),
+            url('font/BRoya.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'BYekan';
+        src: url('font/BYekan.eot?') format('eot'), 
+            url('font/BYekan.otf')  format('opentype'),
+            url('font/BYekan.woff') format('woff'), 
+            url('font/BYekan.ttf')  format('truetype'),
+            url('font/BYekan.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'College';
+        src: url('font/College.eot?') format('eot'), 
+            url('font/College.otf')  format('opentype'),
+            url('font/College.woff') format('woff'), 
+            url('font/College.ttf')  format('truetype'),
+            url('font/College.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'DJGROSS';
+        src: url('font/DJGROSS-webfont.eot?') format('eot'), 
+            url('font/DJGROSS-webfont.otf')  format('opentype'),
+            url('font/DJGROSS-webfont.woff') format('woff'), 
+            url('font/DJGROSS-webfont.ttf')  format('truetype'),
+            url('font/DJGROSS-webfont.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'Jura';
+        src: url('font/Jura-DemiBold-webfont.eot?') format('eot'), 
+            url('font/Jura-DemiBold-webfont.otf')  format('opentype'),
+            url('font/Jura-DemiBold-webfont.woff') format('woff'), 
+            url('font/Jura-DemiBold-webfont.ttf')  format('truetype'),
+            url('font/Jura-DemiBold-webfont.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'JuraLight';
+        src: url('font/Jura-Light-webfont.eot?') format('eot'), 
+            url('font/Jura-Light-webfont.otf')  format('opentype'),
+            url('font/Jura-Light-webfont.woff') format('woff'), 
+            url('font/Jura-Light-webfont.ttf')  format('truetype'),
+            url('font/Jura-Light-webfont.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'oliver';
+        src: url('font/oliver.eot?') format('eot'), 
+            url('font/oliver.otf')  format('opentype'),
+            url('font/oliver.woff') format('woff'), 
+            url('font/oliver.ttf')  format('truetype'),
+            url('font/oliver.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'SansitaOne';
+        src: url('font/SansitaOne.eot?') format('eot'), 
+            url('font/SansitaOne.otf')  format('opentype'),
+            url('font/SansitaOne.woff') format('woff'), 
+            url('font/SansitaOne.ttf')  format('truetype'),
+            url('font/SansitaOne.svg#MyriadPro-Regular') format('svg');
+    }
+    @font-face {
+        font-family: 'School';
+        src: url('font/School.eot?') format('eot'), 
+            url('font/School.otf')  format('opentype'),
+            url('font/School.woff') format('woff'), 
+            url('font/School.ttf')  format('truetype'),
+            url('font/School.svg#MyriadPro-Regular') format('svg');
+    }
+</style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        var color = document.getElementsByClassName("color-background").value || "#000000";
+        console.log(document.getElementsByClassName("color-background").val);
+        console.log(color);
+        var colora =  $("#color-background").val();
+        console.log(colora);
+        $("#head").on(function(){
+            var color = document.getElementById("head").value;
+            console.log("1");
+            document.documentElement.style.cssText = "--color-background: " + color +";"
+        })
+        $("#font").change(function() {
+            $('.changeme').css("font-family", $(this).val());
+        });
+        $("#size").change(function() {
+            $('.changeme').css("font-size", $(this).val() + "px");
+        });
+    </script>
+    <div class="grid-container">
+        <div class="header">Header</div>
 
-<h1>This is a Hello 👋</h1>
-<p>This is a World 🌏</p>
+        <div class="title">
+            <p>Gridd3902</p>
+        </div>
 
+        <div class="setting">
+            <form id="texteditor">
+                <select id="font">
+                    <option value="School">School</option>
+                    <option value="SansitaOne">SansitaOne</option>
+                    <option value="oliver">oliver</option>
+                    <option value="JuraLight">Jura-Light-webfont</option>
+                    <option value="Jura">Jura-DemiBold-webfont</option>
+                    <option value="DJGROSS">DJGROSS-webfont</option>
+                    <option value="College">College</option>
+                    <option value="BYekan">BYekan</option>
+                    <option value="BRoya">BRoya</option>
+                    <option value="BMitraBold">BMitraBold</option>
+                    <option value="BMitra">BMitra</option>
+                </select>
+                <select id="size">
+                    <option value="7">7</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="17">17</option>
+                    <option value="20">20</option>
+                </select>
+            </form>
+            <textarea class="changeme">this is my text example !!!</textarea>
+        </div>
+
+        <div class="color-setting"> 
+            <p>Change color</p>
+                <div>
+                    <input type="color" class="color-background" onchange={handleBackground} id="color-background" name="color-background" value="#e66465" />
+                    <label for="color-background">Background Color</label>
+                </div>
+              
+                <div>
+                    <input type="color" id="body" name="body" value="#f6b73c" />
+                    <label for="body">Body</label>
+                </div>
+        </div>
+
+        <div class="avatar">
+            <img src="https://github.com/gridd3902.png" alt="Gridd3902 avatar">
+        </div>
+
+        <div class="introduction">
+            <p class="jp">「Gridd」というYouTubeチャンネルは、チェスや囲碁などのボードゲーム、特に戦略ゲームに焦点を当てています。プレイ動画、チュートリアル、戦略を提供し、視聴者のスキル向上をサポートします。コンテンツは教育的で魅力的であり、初心者から上級者まで楽しめるようになっています。このチャンネルの目的は、これらのクラシックゲームへの理解を深めると同時に、エンターテインメントと改善のためのヒントを提供することです。</p>
+            <p class="id">The YouTube channel "Gridd" focuses on board games, particularly strategy games like chess and Go. It features gameplay videos, tutorials, and strategies to help viewers improve their skills. The content is designed to be educational and engaging, appealing to both beginners and advanced players. The channel aims to foster a deeper understanding of these classic games while providing entertainment and tips for improvement.</p>
+        </div>  
+        
+        <div class="info">
+            <hr>
+            <p>Email : contact.gridd@gmail.com</p>
+            <hr>
+            <p>Thanks for being here</p>
+            <hr>
+            <div class="link"> Link </div>
+        </div>
+
+        <div class="footer">GRIDD3902©2023</div>
+      </div>
 </body>
 </html>
