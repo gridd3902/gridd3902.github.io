@@ -129,22 +129,34 @@
                     <input type="color" class="fontColorPicker" id="fontColorPicker" name="fontColorPicker" value="#000000" />
                 </div>
 
-                <br><br><br>
+                <br>
                 <div class="button-container">
                     <button class="button" id="defaultButton">Default</button>
                     <button class="button" id="shuffleButton">Shuffle</button>
                 </div>
-
-                
         </div>
 
-        <div class="avatar">
-            <img src="https://github.com/gridd3902.png" alt="Gridd3902 avatar">
+        <div class="avatar" >
+            <img src="https://github.com/gridd3902.png" id="avatar" alt="Gridd3902 avatar">
         </div>
 
         <div class="introduction">
-            <p class="jp">「Gridd」というYouTubeチャンネルは、チェスや囲碁などのボードゲーム、特に戦略ゲームに焦点を当てています。プレイ動画、チュートリアル、戦略を提供し、視聴者のスキル向上をサポートします。コンテンツは教育的で魅力的であり、初心者から上級者まで楽しめるようになっています。このチャンネルの目的は、これらのクラシックゲームへの理解を深めると同時に、エンターテインメントと改善のためのヒントを提供することです。</p>
-            <p class="id">The YouTube channel "Gridd" focuses on board games, particularly strategy games like chess and Go. It features gameplay videos, tutorials, and strategies to help viewers improve their skills. The content is designed to be educational and engaging, appealing to both beginners and advanced players. The channel aims to foster a deeper understanding of these classic games while providing entertainment and tips for improvement.</p>
+            <p class="jp"> 山田太郎は、静かな田舎の小さな村に住んでいました。彼の家は古いが、暖かみのある伝統的な日本家屋でした。毎朝、太郎は早起きして庭の手入れをするのが日課でした。庭には、美しい梅や桜の木があり、四季折々の花々が咲き誇ります。
+                <br>
+                近くには清らかな川が流れ、太郎は時々釣りを楽しんでいました。村の人々は皆、太郎のことをよく知っており、彼の庭の美しさに感嘆していました。太郎はまた、書道や茶道などの日本の伝統文化を大切にしており、村の若者たちにその技術を教えていました。
+                <br>
+                ある日、都会から一人の女性が村を訪れました。彼女は都会の喧騒から逃れて、静かな場所でリフレッシュしたいと考えていました。太郎は彼女に村の見どころを案内し、美しい風景や静かな時間を楽しんでもらいました。
+                <br>
+                夕暮れ時、二人は川辺に座り、夕陽を眺めながら話をしました。都会での忙しい生活とは対照的な、穏やかな時間が流れていました。太郎の優しさと自然の美しさに触れた女性は、心からリラックスし、村の魅力に魅了されました。
+                <br>
+                その後、女性は都会に戻りましたが、村での経験は忘れられない思い出となりました。太郎もまた、彼女との出会いに感謝し、これからも庭や村の人々との交流を大切にしながら、静かな日々を送ることを心に誓いました。
+                <br>
+                村の生活はシンプルですが、豊かな自然と温かい人々に囲まれた幸せな日々が続いていました。</p>
+            <p class="en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eros augue, euismod scelerisque dui eget, convallis sodales neque. Aliquam erat ipsum, condimentum ac quam eget, ultricies fringilla diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed finibus augue sed leo congue accumsan. Maecenas porta, est quis blandit cursus, erat nunc consequat ante, id consectetur quam quam vel nulla. Sed in magna vitae magna feugiat dictum sit amet et massa. Aenean sed finibus arcu. Aliquam eget tincidunt mauris. Donec at gravida quam.
+                <br>
+                Mauris tristique ornare fringilla. Sed ac laoreet lectus. Sed ullamcorper tempor aliquet. Vivamus sit amet diam ac turpis mollis imperdiet. Donec nisl mi, facilisis ac lectus nec, pharetra vulputate nunc. Nulla interdum ante sed velit luctus, vel elementum augue tempus. Vivamus ultricies ultricies justo quis convallis. Donec eu magna et massa dictum vestibulum ut vel elit. Donec molestie a enim vitae pellentesque. Sed non mi id eros rhoncus commodo et sit amet felis. Aenean diam nisl, pulvinar eget posuere eu, blandit ac sapien. Maecenas convallis tincidunt tortor. Pellentesque non placerat libero.
+                <br>
+                Vivamus imperdiet porttitor felis, ut dignissim nisi. Mauris suscipit vitae arcu eu eleifend. Phasellus quis magna lacus. Ut leo mauris, mattis a bibendum a, finibus ac ipsum. In hac habitasse platea dictumst. Nullam laoreet velit dolor, eu efficitur dui pellentesque ac. Nam eu sagittis risus, et volutpat magna. Sed egestas laoreet fringilla. Praesent scelerisque magna at eros auctor, in gravida massa placerat.</p>
         </div>  
         
         <div class="info">
@@ -154,6 +166,7 @@
             <p>Thanks for being here</p>
             <hr>
             <div class="link"> Link </div>
+            <a href="https://github.com/gridd3902" style="color: inherit;"target="_blank">Github</a>
         </div>
 
         <div class="footer">GRIDD3902©2023</div>
@@ -163,7 +176,8 @@
             font: "'Times New Roman', serif",
             fontSize: 16,
             backgroundColor: "#ffffff",
-            fontColor: "#000000"
+            fontColor: "#000000",
+            avatar : "https://github.com/gridd3902.png"
         };
         document.getElementById('defaultButton').addEventListener('click', function() {
             document.documentElement.style.setProperty('--main-font', defaultSettings.font);
@@ -175,6 +189,7 @@
             document.getElementById('fontSize').value = defaultSettings.fontSize;
             document.getElementById('bgColorPicker').value = defaultSettings.backgroundColor;
             document.getElementById('fontColorPicker').value = defaultSettings.fontColor;
+            document.getElementById('avatar').src = defaultSettings.avatar;
         });
         document.getElementById('shuffleButton').addEventListener('click', function() {
             const randomColor = () => '#' + Math.floor(Math.random()*16777215).toString(16);
@@ -199,6 +214,21 @@
         });
         document.getElementById('fontColorPicker').addEventListener('input', function() {
             document.documentElement.style.setProperty('--font-color', this.value);
+        });
+        document.getElementById('avatar').addEventListener('click', function() {
+            const randomAvatar = () =>{
+                const avatars = [
+                    "https://github.com/gridd3902.png",
+                    "https://fastly.picsum.photos/id/419/400/300.jpg?hmac=_uvN6lVi9xVvziXFmqfNijPCGiRnHSymd5YMlCDip5Q",
+                    "https://fastly.picsum.photos/id/404/500/300.jpg?hmac=Ahiv5FvBIWej0gwMR4rBSjLtQ6kbOyd6zblZ8cxGbF0",
+                    "https://fastly.picsum.photos/id/27/300/200.jpg?hmac=vNOd73juAW0jlHOJGlLosz9s1nzsxMNNmbj14FxLPKw",
+                    "https://fastly.picsum.photos/id/664/200/200.jpg?hmac=d8ZWM7R6VABV4JdJPvmCOGPqq3E6KTIFDz-FYp73TJo",
+                    "https://fastly.picsum.photos/id/374/200/200.jpg?hmac=ifUjaLhaxfMlsBL7zHVuQ1YgZ1ECmNDNG8v0D9uHdIc"
+                ]
+                return avatars[Math.floor(Math.random() * avatars.length)];
+            }
+            const newAvatar = randomAvatar();
+            document.getElementById('avatar').src = newAvatar;
         });
     </script>
 </body>
