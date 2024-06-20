@@ -16,12 +16,19 @@
         font-size: 16px;
         transition: font-family 0.3s ease, font-size 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
-    .header { grid-area: header; text-align: center;}
+    .header { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        padding: 10px;
+        background-color: #f0f0f0;
+        z-index: 10;}
     .title { grid-area: title; text-align: center; font-size: 40px;}
     .info { grid-area: info; font-size: 12px; margin-left: 20px; margin-right: 20px;font-size: var(--font-size);}
     .avatar { grid-area: avatar; align-self: flex-start;}
     .introduction { grid-area: introduction; text-align: justify; font-size: var(--font-size); }
-    .footer { grid-area: footer; }
+    .footer { grid-area: footer; font-size: 12px; font-family: Arial, Helvetica, sans-serif;}
     .setting { grid-area: setting; text-align: center;}
     .color-setting { grid-area: color; margin-left: 20px; margin-right: 20px;}
     
@@ -76,6 +83,15 @@
         border: 1px solid var(--border-color);
         border-radius: 10px;
     }
+    .color-box {
+            width: 20px;
+            height: 20px;
+        }
+    .box1 { background-color: #8FBC8F; } /* Dark Sea Green */
+    .box2 { background-color: #A9A9A9; } /* Dark Gray */
+    .box3 { background-color: #F4A460; } /* Sandy Brown */
+    .box4 { background-color: #DAA520; } /* Goldenrod */
+    .box5 { background-color: #BC8F8F; } /* Rosy Brown */
     img{
         width: 100%;
         height: 100%;
@@ -87,7 +103,13 @@
 <body>
 
     <div class="grid-container">
-        <div class="header">Header</div>
+        <div class="header">
+            <div class="color-box box1"></div>
+            <div class="color-box box2"></div>
+            <div class="color-box box3"></div>
+            <div class="color-box box4"></div>
+            <div class="color-box box5"></div>
+        </div>
 
         <div class="title">
             <p>Gridd3902</p>
@@ -169,7 +191,7 @@
             <a href="https://github.com/gridd3902" style="color: inherit;"target="_blank">Github</a>
         </div>
 
-        <div class="footer">GRIDD3902©2023</div>
+        <div class="footer">gridd3902 © 2023</div>
       </div>
       <script>
         const defaultSettings = {
