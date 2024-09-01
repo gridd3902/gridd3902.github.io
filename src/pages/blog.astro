@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Fetch all markdown files in the /blog/ directory
+const posts = await getCollection('blog');
+---
+
+<BaseLayout title="Blog">
+    <h1>Blog</h1>
+    <ul>
+        {posts.length > 0 ? (
+            posts.map(post => (
+            <li>
+                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                <p>{post.data.description}</p>
+            </li>
+        ))
+        ) : (
+            <p>No posts available</p>
+        )}
+    </ul>
+</BaseLayout>
