@@ -1,6 +1,6 @@
 ---
 title: "September 1st - September 3rd"
-description: "This is my very first post!"
+description: "Create blog, Help wanted and Dokkōdō"
 pubDate: 2014-02-18 22:15:00
 slug: "first-post"
 ---
@@ -11,7 +11,8 @@ slug: "first-post"
 
 September 1st - September 3rd
 
-Learning stage:
+## Learning stage
+
 Learn how to build this blog and here we are, Blog with Astro framework... i kinda like the flow of this framework but still... need to improve here and there 🤪🤪🤪, as for now... this is what i do... doing the first post.
 
 Some college message me too on this timeframe to get some birthday project script? but i kinda in hurry and just copy and paste from github (literally search for "Birthday Script Github" on google) sorry if you're the one who ask me that question 🤣🤣🤣 but kinda want to try that as side project maybe(?).
