@@ -1,7 +1,7 @@
 ---
 title: "September 1st - September 3rd"
 description: "Create blog, Help wanted and Dokkōdō"
-pubDate: 2014-02-18 22:15:00
+pubDate: 2024-09-03 22:15:00
 slug: "first-post"
 ---
 
