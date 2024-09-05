@@ -1,0 +1,47 @@
+---
+const { post } = Astro.props;
+---
+
+<article class="blog-post-preview">
+    <a href={`/blog/${post.slug}/`}>
+        <h2>{post.data.title}</h2>
+        <p>{post.data.description}</p>
+        <div class="post-meta">
+        <span class="date">{new Date(post.data.pubDate).toLocaleDateString()}</span>
+        <span class="read-more">Read more →</span>
+        </div>
+    </a>
+</article>
+<style>
+    .blog-post-preview {
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-post-preview:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        color: var(--color-secondary);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: var(--color-text);
+    }
+
+    .read-more {
+        color: var(--color-primary);
+    }
+</style>

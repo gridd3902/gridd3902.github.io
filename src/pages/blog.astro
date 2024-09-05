@@ -1,23 +1,27 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/BaseLayout.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
 import { getCollection } from 'astro:content';
 
-// Fetch all markdown files in the /blog/ directory
-const posts = await getCollection('blog');
+const posts = await getCollection('blog')
 ---
 
-<BaseLayout title="Blog">
-    <h1>Blog</h1>
-    <ul>
-        {posts.length > 0 ? (
-            posts.map(post => (
-            <li>
-                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-                <p>{post.data.description}</p>
-            </li>
-        ))
-        ) : (
-            <p>No posts available</p>
-        )}
-    </ul>
-</BaseLayout>
+<Layout title="Blog">
+    <h1>Latest Blog Posts</h1>
+    <section class="blog-post-list">
+        {posts.length > 0 ? posts.map((post) => <BlogPostPreview post={post} />) : (<p>No posts available</p>)}
+    </section>
+</Layout>
+
+<style>
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+    }
+
+    .blog-post-list {
+        display: grid;
+        gap: 2rem;
+    }
+</style>

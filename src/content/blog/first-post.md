@@ -11,7 +11,7 @@ slug: "first-post"
 
 September 1st - September 3rd
 
-## Learning stage
+### Notable Changes
 
 Learn how to build this blog and here we are, Blog with Astro framework... i kinda like the flow of this framework but still... need to improve here and there 🤪🤪🤪, as for now... this is what i do... doing the first post.
 

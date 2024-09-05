@@ -7,5 +7,38 @@ const title = "Welcome to My Blog";
 <BaseLayout title={title}>
 	<h1>{title}</h1>
 	<p>Hello! I'm Gridd, and this is my blog where I share my thoughts and experiences on daily micro-blog for improvement.</p>
-	<p>Stay tuned for updates!</p>
+	<div class="cta-container">
+		<a href="/blog" class="cta-button">Read Blog Posts</a>
+	</div>
 </BaseLayout>
+
+<style>
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: var(--color-primary);
+	}
+
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+
+	.cta-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.cta-button {
+		background-color: var(--color-primary);
+		color: var(--color-background);
+		padding: 0.75rem 1.5rem;
+		border-radius: 5px;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+
+	.cta-button:hover {
+		background-color: var(--color-secondary);
+	}
+</style>

@@ -1,25 +1,86 @@
 ---
+// import '../styles/global.css';
 const { title } = Astro.props;
 ---
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- <link rel="stylesheet" href="/style/global.css"/> -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <link rel="stylesheet" href="/styles/global.css" />
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href={new URL("rss.xml", Astro.site)}>
     </head>
     <body>
         <header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/blog">Blog</a>
-            </nav>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+        </nav>
         </header>
         <main>
             <slot />
         </main>
         <footer>
-            <p>gridd3902 &copy; 2024</p>
+            <p>&copy; 2024 Gridd3902. All rights reserved.</p>
         </footer>
     </body>
 </html>
+
+<style is:global>
+    :root {
+      --color-background: #1a1a1a;
+      --color-text: #e0e0e0;
+      --color-primary: #bb86fc;
+      --color-secondary: #03dac6;
+      --color-accent: #cf6679;
+    }
+  
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+  
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+  
+    a:hover {
+      color: var(--color-secondary);
+    }
+  
+    header {
+      background-color: rgba(26, 26, 26, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+  
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+  
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid var(--color-primary);
+    }
+  </style>
